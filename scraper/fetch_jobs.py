@@ -1,8 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-# One publicly accessible Indeed India job DETAIL URL
-# URL format: https://in.indeed.com/viewjob?jk=XXXXXXXX
+
 URL = "https://in.indeed.com/viewjob?jk=5ddd43ad65fb0ac7"
 
 def fetch_job_page(url):
@@ -12,7 +11,6 @@ def fetch_job_page(url):
             "Accept-Language": "en-US,en;q=0.9",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "Connection": "keep-alive",
-            # Additional headers to mimic browser behavior and avoid 403s
             "Referer": "https://in.indeed.com/",
             "Sec-Fetch-Dest": "document",
             "Sec-Fetch-Mode": "navigate",
